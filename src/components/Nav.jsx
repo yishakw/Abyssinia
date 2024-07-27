@@ -5,7 +5,7 @@ import IMAGES from "../assets/Images";
 
 export default function Nav() {
   return (
-    <nav className="flex sticky justify-between items-center w-screen bg-slate-400 px-5 sm:px-6 sm:bg-slate-100 p-6 text-xl ">
+    <nav className="flex sticky justify-between items-center bg-sky-400 bg-opacity-10  sm:px-6 sm:bg-slate-10 p-6 text-xl ">
     {/* <h2 className="text-xl ">Abyssinia Software solution</h2> */}
     <img src={IMAGES.logo} alt="logo" className=" rounded-full w-[100px]" />
       {/* <button>Start Contact</button> */}
@@ -20,7 +20,8 @@ export default function Nav() {
       </button>
       <div className="hidden md:block">
 
-      <Button name="Start Contact"/>
+      {/* <Button name="Start Contact"/> */}
+      <NavBtn />
       </div>
     <BsList size={40} className="lg:hidden"/>
       {/* <ul>
