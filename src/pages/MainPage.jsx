@@ -11,7 +11,7 @@ function MainPage() {
 
       <h1 className="text-5xl sm:text-7xl lg:text-9xl font-yatara uppercase text-amber-600 lg:mt-6">Abyssiniya </h1>
      
-      <h2 className="text-xl sm:text-2xl text-right text-amber-400 lg:">Software Solutions</h2>
+      <h2 className="text-xl sm:text-2xl text-right text-amber-400 pr-4">Software Solutions</h2>
       <h2 className="text-xl sm:text-2xl lg:text-3xl text-right text-amber-200">Website Design and Development</h2>
 
       

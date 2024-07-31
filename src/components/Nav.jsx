@@ -2,26 +2,33 @@ import { BsList } from "react-icons/bs";
 import NavBtn from "./NavBtn";
 import Button from "./Button";
 import IMAGES from "../assets/Images";
+import { useSelector, useDispatch } from "react-redux";
+import { increment } from "../state/slices/counterSlice";
 
 export default function Nav() {
+  // const count = useSelector((state) => state.counter.value)
+  // const dispatch = useDispatch()
+  
   return (
     <nav className="flex sticky justify-between items-center bg-sky-400 bg-opacity-10  sm:px-6 sm:bg-slate-10 p-6 text-xl ">
-    {/* <h2 className="text-xl ">Abyssinia Software solution</h2> */}
-    <img src={IMAGES.logo} alt="logo" className=" rounded-full w-[100px]" />
+      <div>
+    <img src={IMAGES.logo} alt="logo" className="relative rounded-full bg-whit bg-opacity-40 w-[100px]" />
+    <div className="absolute top-11 rounded-3xl bottom-0 right-0 left-8 flex items-center justify-center w-20 -z-10 tw-11 h-11 opacity-35 -rotate-12 bg-black "></div>
+      </div>
       {/* <button>Start Contact</button> */}
     <div className="hidden lg:flex">
-    <NavBtn />
-    <NavBtn />
-    <NavBtn />
-    <NavBtn />
-    <NavBtn />
+    <NavBtn title="Home"/>
+    <NavBtn title="Service"/>
+    <NavBtn title="Projects"/>
+    <NavBtn title="FAQs"/>
+    <NavBtn title="Blog"/>
     </div>
     <button>
       </button>
       <div className="hidden md:block">
 
       {/* <Button name="Start Contact"/> */}
-      <NavBtn />
+      <NavBtn title="Start Contact"/>
       </div>
     <BsList size={40} className="lg:hidden"/>
       {/* <ul>

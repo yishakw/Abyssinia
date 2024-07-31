@@ -5,7 +5,8 @@ function Service() {
     {title: "Website Development", text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design", icon:"web"}, {
       title:"Mobile App development", text:"We develop IOS and Android mobile apps. with free and unlimited technical support. with responsive design and attractive UI/UX design", button:"Read More", icon:"mobile"
     }
-
+, {title: "Website Development", text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design", icon:"training"},
+{title: "Website Development", text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design", icon:"security"},
   ]
   return (
     // <div className="h-[500px] flex flex-col text-amber-400 justify-center items-center m-4 bg-green-800 bg-opacity-35">
@@ -14,7 +15,7 @@ function Service() {
     //     <Card title="Website Development" text="we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design" button="Read More"/>
     // </div>
 <PageContainer title="Our Services" subtitle="Offering The Best High Quality Services">
-{services.map(service => <Card title={service.title} key={service.title} text={service.text} button="Read More" icon={service.icon}/>)
+{services.map((service, i) => <Card title={service.title} key={i} text={service.text} button="Read More" icon={service.icon}/>)
 
 }
 </PageContainer >
