@@ -25,7 +25,7 @@ export default function Nav() {
       <div
         className={`${
           !show && "hidden"
-        } etfili  absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
+        } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
       >
         <ul className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row gap-3 sm:gap-0 ">
           <NavBtn title="Home" />
