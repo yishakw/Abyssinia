@@ -5,15 +5,16 @@ import IMAGES from "../assets/Images";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../state/slices/counterSlice";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   // const count = useSelector((state) => state.counter.value)
   // const dispatch = useDispatch()
-  const [show, setShow] = useState(false)
- 
-  console.log(show)
+  const [show, setShow] = useState(false);
+
+  console.log(show);
   return (
-    <nav className="flex sticky justify-between items-center bg-sky-400 bg-opacity-10  sm:px-6 sm:bg-slate-10 p-6 text-xl ">
+    <nav className="flex fixed w-full justify-between items-center bg-sky-400 bg-opacity-10  sm:px-6 sm:bg-slate-10 p-6 text-xl ">
       <div>
         <img
           src={IMAGES.logo}
@@ -28,11 +29,21 @@ export default function Nav() {
         } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
       >
         <ul className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row gap-3 sm:gap-0 ">
-          <NavBtn title="Home" />
-          <NavBtn title="Service" />
-          <NavBtn title="Projects" />
-          <NavBtn title="FAQs" />
-          <NavBtn title="Blog" /> 
+          <Link to={"/"}>
+            <NavBtn title="Home" />
+          </Link>
+          <Link to={"/service"}>
+            <NavBtn title="Service" />
+          </Link>
+          <Link to={"/projects"}>
+            <NavBtn title="Projects" />
+          </Link>
+          <Link to={"/questions"}>
+            <NavBtn title="FAQs" />
+          </Link>
+          <Link to={"/blog"}>
+            <NavBtn title="Blog" />
+          </Link>
         </ul>
       </div>
 
