@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { Typewriter } from "react-simple-typewriter";
 import Service from "./Service";
 import Projects from "./Projects";
 import Questions from "./Questions";
 import Blog from "./Blog";
+import { motion } from "framer-motion";
+import Footer from "./Footer";
+import BackToTop from "../components/BackToTop";
 function MainPage() {
   const titles = [
     "Web Development",
@@ -18,14 +21,20 @@ function MainPage() {
     "We provide technology consulting on software, networking, cyber, hardware development and implementation",
   ];
   const [title, setTitle] = useState([]);
+  useEffect(() => {}, []);
   return (
     <>
-      <div className="w-full place-content-center flex justify-center items-center h-[500px] bg-slate-40">
+      <div className="w-full place-content-center flex justify-center items-center pt-52 min-h-[500px] pb-11 mb-36 bg-slate-40 bg-url([])">
         <div className="">
           <div className="mb-7 ">
-            <h1 className="text-5xl sm:text-7xl lg:text-9xl px-3 font-yatara uppercase text-amber-600 lg:mt-6 ">
-              Abyssiniya{" "}
-            </h1>
+            <motion.h1
+              className="text-5xl sm:text-7xl lg:text-9xl px-3 font-yatara uppercase text-amber-600 lg:mt-6 "
+              initial={{ opacity: 0, scale: 0.5, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Abyssiniya
+            </motion.h1>
 
             <h2 className="text-xl sm:text-2xl text-right text-amber-400 pr-4">
               Software Solutions
@@ -53,10 +62,12 @@ function MainPage() {
           </div>
         </div>
       </div>
+      <BackToTop />
       <Service />
       <Projects />
-      <Questions />
       <Blog />
+      <Questions />
+      <Footer />
     </>
   );
 }

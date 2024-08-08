@@ -39,7 +39,7 @@ function Questions() {
         <Question />
         <Question />
       </div>
-      <div className="w-full opacity-40 p-7 sm:full   md:w-[300px] lg:w-full md:ml-8 lg:ml-24 bg-slate-50">
+      <div className="w-full opacity-40 p-7 sm:full md:w-[300px] lg:w-full md:ml-8 lg:ml-24 bg-slate-50">
         <img src={IMAGES.training} alt="img" />
       </div>
     </PageContainer>
