@@ -1,7 +1,5 @@
-import { useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 function BackToTop() {
   const [scr, setScr] = useState(false);
@@ -16,7 +14,7 @@ function BackToTop() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return window.removeEventListener("scroll", handleScroll);
+    // return window.removeEventListener("scroll", handleScroll);
   }, [scr]);
   const handleClick = () => {
     window.scrollTo({

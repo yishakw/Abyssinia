@@ -31,7 +31,11 @@ function Projects() {
     },
   ];
   return (
-    <PageContainer title="Our Projects" subtitle="Explore Our Latest Projects">
+    <PageContainer
+      title="Our Projects"
+      subtitle="Explore Our Latest Projects"
+      numGrid={3}
+    >
       {services.map((project, i) => (
         <ProjectCard
           key={i}

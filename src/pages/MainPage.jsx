@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "../components/Button";
 import { Typewriter } from "react-simple-typewriter";
 import Service from "./Service";
@@ -21,10 +21,9 @@ function MainPage() {
     "We provide technology consulting on software, networking, cyber, hardware development and implementation",
   ];
   const [title, setTitle] = useState([]);
-  useEffect(() => {}, []);
   return (
     <>
-      <div className="w-full place-content-center flex justify-center items-center pt-52 min-h-[500px] pb-11 mb-36 bg-slate-40 bg-url([])">
+      <div className="w-full h-[100vh] place-content-center flex justify-center items-center pt-52 min-h-[500px] pb-11 bg-slate-40  ">
         <div className="">
           <div className="mb-7 ">
             <motion.h1

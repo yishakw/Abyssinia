@@ -34,11 +34,13 @@ export default function Nav() {
       } bg-opacit-10  sm:px-6 sm:bg-slate-10 p-6 text-xl`}
     >
       <div>
-        <img
-          src={IMAGES.logo}
-          alt="logo"
-          className="relative rounded-full bg-whit bg-opacity-40 w-[100px] cursor-pointer"
-        />
+        <Link to="/">
+          <img
+            src={IMAGES.logo}
+            alt="logo"
+            className="relative rounded-full bg-whit bg-opacity-40 w-[100px] cursor-pointer"
+          />
+        </Link>
         <div className="absolute  top-11 rounded-3xl bottom-0 right-0 left-8 flex items-center justify-center w-20 -z-10 tw-11 h-11 opacity-35 -rotate-12 bg-black "></div>
       </div>
       <div

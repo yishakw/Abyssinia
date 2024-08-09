@@ -1,6 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-function PageContainer({ children, title, subtitle, smFlex }) {
+function PageContainer({ children, title, subtitle, smFlex, numGrid = 2 }) {
   const ref = useRef(null);
   const isInview = useInView(ref, { once: true });
   const contr = useAnimation();
@@ -31,7 +31,7 @@ function PageContainer({ children, title, subtitle, smFlex }) {
         <div
           className={`flex flex-col items-center justify-center gap-5 ${
             smFlex ? "" : "sm:grid  sm:grid-cols-2 sm:justify-center"
-          } md:grid md:justify-between md:gap-14 md:grid-cols-2 my-11`}
+          } md:grid md:justify-between md:gap-14 md:grid-cols-${numGrid} my-11`}
         >
           {children}
         </div>

@@ -14,13 +14,14 @@ function Footer() {
         <p className="mb-2">Subscribe to our news letter</p>
         <form
           action="submit"
-          className="bg-slate-700 h-14 p-[6px] w-64 flex rounded-full sm:w-80 sm:justify-between"
+          className="bg-slate-700 h-14 text-amber-400 p-[6px] w-64 flex rounded-full sm:w-80 sm:justify-between"
         >
           <input
             type="email"
-            className="border-none bg-transparent active:border-none "
+            placeholder="Enter your email adress"
+            className="border-none bg-transparent focus:border-none border-0 focus:outline-none  pl-2  "
           />
-          <button className="text-amber-600 bg-sky-950 py-2 px-3 flex items-center rounded-full">
+          <button className="text-amber-600 bg-sky-950 py-2 px-3 flex items-center rounded-full hover:scale-105 ">
             signup
           </button>
         </form>
