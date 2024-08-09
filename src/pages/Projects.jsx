@@ -3,30 +3,30 @@ import ProjectCard from "../components/ProjectCard";
 import IMAGES from "../assets/Images";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrementByAmount } from "../state/slices/counterSlice";
+import Button from "../components/Button";
 function Projects() {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.counter.value);
   const services = [
     {
       title: "Website Development",
-      text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
+      text: "we develop Web apps, and websites for ",
       icon: "web",
     },
     {
       title: "Mobile App development",
-      text: "We develop IOS and Android mobile apps. with free and unlimited technical support. with responsive design and attractive UI/UX design",
-      button: "Read More",
+      text: "companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
       icon: "mobile",
     },
     {
       title: "Website Development",
-      text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
+      text: " for companies and for individuals with SEO optimization, with Attractive UI/UX desig",
       icon: "training",
       height: "200",
     },
     {
       title: "Website Development",
-      text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
+      text: "we develop Web appsptimization, with Attractive UI/UX design, Responsive design",
       icon: "training",
     },
   ];
@@ -41,11 +41,12 @@ function Projects() {
           key={i}
           k={i}
           title={project.title}
-          text={project.subtitle}
+          text={project.text}
           icon={project.icon}
           width={project?.width}
         />
       ))}
+      {/* <Button /> */}
       {/* <button onClick={() => dispatch(increment())}>count: {count}</button> */}
     </PageContainer>
   );
