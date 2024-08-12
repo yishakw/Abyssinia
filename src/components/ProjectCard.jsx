@@ -11,15 +11,18 @@ function ProjectCard({ icon, title, text, button, width, height, k }) {
   // const [hovered, setHovered] = useState(false);
   return (
     <div
-      className={`relative flex flex-col justify-center max-w-96  w-full items-center text-center text-blue-950 bg-slate-100 hover:bg-white hover:bg-opacity-85 bg-opacity-70 p-1 m-5 transition-all duration-500 rounded `}
+      className={`relative flex flex-col justify-center max-w-96  w-[80vw] sm:w-[100%] lg:w-80 lg:h-[500px]
+       items-center text-center text-blue-950 h-[105%] bg-slate-100 hover:bg-white hover:bg-opacity-85 bg-opacity-70 p-1  transition-all duration-500 rounded`}
       onMouseEnter={() => dispatch(projectH(k))}
       onMouseLeave={() => dispatch(projectH(k))}
     >
-      <div className=" flex items-center justify-center w-52 lg:w-[450px] lg:h-[400px] h-60">
+      <div
+        className={` flex items-center justify-center sm:w-72 lg:w-[280px] lg:h-[400px] h-80`}
+      >
         <img
           src={IMAGES[icon]}
           alt="icon"
-          className={`${hovered ? "w-52" : ""}`}
+          className={`${hovered ? "scale-[1.8] transition-all " : ""}`}
         />
       </div>
       <div className="top-0 left-0 right-0 bottom-0 absolute flex flex-col items-center justify-center bg-emerald-800 opacity-0 transition-opacity duration-500 hover:opacity-90 ">

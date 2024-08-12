@@ -33,6 +33,10 @@ function Questions() {
   
   return (
     <PageContainer title="FAQs" subtitle="Get the Answers to Common Questions">
+      {/* className=
+      {`flex flex-col items-center justify-center gap-5 ${
+        smFlex ? "" : "sm:grid  sm:grid-cols-2 sm:justify-center"
+      } md:grid md:justify-between md:gap-14 md:grid-cols-${numGrid} my-11`} */}
       <div className="flex flex-col items-center justify-center lg:my-24 w-[310px] ">
         <Question />
         <Question />

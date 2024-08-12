@@ -1,6 +1,6 @@
 import Card from "../components/Card"
 import PageContainer from "../components/PageContainer"
-function Service() {
+function Service({ smFlex }) {
   const services = [
     {
       title: "Website Development",
@@ -34,15 +34,21 @@ function Service() {
       title="Our Services"
       subtitle="Offering The Best High Quality Services"
     >
-      {services.map((service, i) => (
-        <Card
-          title={service.title}
-          key={i}
-          text={service.text}
-          button="Read More"
-          icon={service.icon}
-        />
-      ))}
+      <div
+        className={`flex flex-col items-center justify-center gap-5  ${
+          smFlex ? "" : "sm:grid  sm:grid-cols-2 sm:justify-center"
+        } md:grid md:justify-between md:gap-8 md:grid-cols-2 my-11`}
+      >
+        {services.map((service, i) => (
+          <Card
+            title={service.title}
+            key={i}
+            text={service.text}
+            button="Read More"
+            icon={service.icon}
+          />
+        ))}
+      </div>
     </PageContainer>
   );
 }

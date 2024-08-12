@@ -6,8 +6,9 @@ const IMAGES = {
   mobile: new URL("./mobile-development.svg", import.meta.url).href,
   consulting: new URL("./technology-idea.svg", import.meta.url).href,
   training: new URL("./training.svg", import.meta.url).href,
-  web: new URL("./web.svg", import.meta.url).href,
-
+  black: new URL("./cursor.webp", import.meta.url).href,
+  car: new URL("./colorful.webp", import.meta.url).href,
+  sqr: new URL("./squares.jpg", import.meta.url).href,
 };
 
 export default IMAGES;
