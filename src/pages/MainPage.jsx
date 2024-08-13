@@ -30,7 +30,7 @@ function MainPage() {
               className="text-5xl sm:text-7xl lg:text-9xl px-3 font-yatara uppercase text-amber-600 lg:mt-6 "
               initial={{ opacity: 0, scale: 0.5, y: 50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
             >
               Abyssiniya
             </motion.h1>

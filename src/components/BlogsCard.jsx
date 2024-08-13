@@ -7,7 +7,7 @@ function BlogsCard({ icon, title, text, button }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="flex flex-col justify-center   lg:min-w-80  items-center hover:text-amber-500 bg-slate-950 transition-all duration-500 hover:bg-black hover:bg-opacity-75 bg-opacity-70 py-4  hover:shadow-md hover:shadow-amber-700 text-amber-600  border-b border-slate-500  "
+      className="flex flex-col justify-center   lg:min-w-80  items-center hover:text-amber-500 bg-slate-950 transition-all duration-500 hover:bg-black hover:bg-opacity-75 bg-opacity-70 py-6  hover:shadow-md hover:shadow-amber-700 text-amber-600 lg:h-[70vh] border-b border-slate-500  "
     >
       <div className=" h-full  my-2 sm:h-full sm:p-4 flex flex-col md:flex-row lg:mx-11 justify-center items-center gap-11">
         <div className="w-fit scale-90 flex flex-col items-center mt-2 justify-center overflow-hidden">
@@ -20,15 +20,15 @@ function BlogsCard({ icon, title, text, button }) {
           />
         </div>
         <div className=" flex flex-col px- items-center md:items-start justify-center">
-          <div className="flex justify-between px-3 w-full text-sm">
-            <p className="">July 04, 2024</p>
-            <p className="">Admin</p>
-          </div>
-          <h1 className="text-2xl font-bold text-center md:text-start my-2">
+          <div className="flex justify-between px-3 w-full text-sm"></div>
+          <h1 className="text-2xl font-bold text-center md:text-start mt-2">
             Abyssinia Software Solutions Launches New Innovative Software
           </h1>
-          <p className="text-start hidden lg:inline pb-6">{text}</p>
-          <Button name={button} bg="" u={true} />
+          <p className=" mb-2">July 04, 2024</p>
+          {/* <p className="text-start hidden lg:inline pb-6">{text}</p> */}
+          <div className=" relative top-2 sm:top-11 md:top-4 lg:top-14">
+            <Button name={button} bg="" u={true} />
+          </div>
         </div>
       </div>
     </div>

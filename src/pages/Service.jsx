@@ -46,6 +46,7 @@ function Service({ smFlex }) {
             text={service.text}
             button="Read More"
             icon={service.icon}
+            indix={i}
           />
         ))}
       </div>
