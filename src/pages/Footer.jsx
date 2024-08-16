@@ -1,5 +1,7 @@
 import { Children } from "react";
+import { useForm } from "react-hook-form";
 function Footer() {
+  const { register, handleSubmit } = useForm();
   function FooterComponent({ children, header, classes }) {
     return (
       <div className={classes}>
@@ -11,12 +13,13 @@ function Footer() {
   return (
     <footer className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 py-11 bg-slate-950 bg-opacity-90 text-amber-900 px-11">
       <FooterComponent header={"Newsletter"} classes={"col-span-2"}>
-        <p className="mb-2">Subscribe to our news letter</p>
+        <p className="mb-2 ml-1">Subscribe to our news letter</p>
         <form
-          action="submit"
-          className="bg-slate-700 h-14 text-amber-400 p-[6px] w-64 flex rounded-full sm:w-80 sm:justify-between"
+          onSubmit={handleSubmit((data) => console.log(data))}
+          className="bg-slate-700 h-14 text-amber-400 p-[6px]  w-64 flex rounded-full sm:w-80 sm:justify-between"
         >
           <input
+            {...register("email", { required: true })}
             type="email"
             placeholder="Enter your email adress"
             className="border-none bg-transparent focus:border-none border-0 focus:outline-none  pl-2  "
@@ -58,7 +61,7 @@ function Footer() {
           maintenance.
         </p>
       </FooterComponent> */}
-      <FooterComponent>
+      <FooterComponent classes={" text-center "}>
         <p>Abyssinia Software Solutions,All rights reserved</p>
       </FooterComponent>
     </footer>

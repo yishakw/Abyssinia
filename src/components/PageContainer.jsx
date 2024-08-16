@@ -31,9 +31,9 @@ function PageContainer({
         initial="hid"
         animate={contr}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className={`min-h-[500px] flex flex-col text-amber-400  items-center mx-${
+        className={`min-h-[100vh] flex flex-col text-amber-400  items-center mx-${
           bg ? "" : 4
-        }  pt-32 bg-${bg} bg-opacity-${bg ? 60 : 35} pb-20`}
+        }  pt-44 bg-${bg} bg-opacity-${bg ? 60 : 35} pb-20`}
       >
         <h1 className="text-[40px] text-amber-600 mb-3">{title}</h1>
         <h2 className="text-xl text-center">{subtitle}</h2>

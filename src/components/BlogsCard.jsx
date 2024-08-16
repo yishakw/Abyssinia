@@ -7,7 +7,7 @@ function BlogsCard({ icon, title, text, button }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="flex flex-col justify-center   lg:min-w-80  items-center hover:text-amber-500 bg-slate-950 transition-all duration-500 hover:bg-black hover:bg-opacity-75 bg-opacity-70 py-6  hover:shadow-md hover:shadow-amber-700 text-amber-600 lg:h-[70vh] border-b border-slate-500  "
+      className="flex flex-col justify-center lg:w-[95vw]  lg:min-w-80  items-center hover:text-amber-500 bg-zinc-950 transition-all duration-500 hover:bg-slate-950 hover:bg-opacity-75 bg-opacity-70 py-6  hover:shadow-md  text-amber-600 lg:h-[70vh] border-b border-slate-500  "
     >
       <div className=" h-full  my-2 sm:h-full sm:p-4 flex flex-col md:flex-row lg:mx-11 justify-center items-center gap-11">
         <div className="w-fit scale-90 flex flex-col items-center mt-2 justify-center overflow-hidden">

@@ -4,18 +4,38 @@ import Button from "./Button";
 import IMAGES from "../assets/Images";
 import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../state/slices/counterSlice";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { current } from "@reduxjs/toolkit";
 
 export default function Nav() {
   // const count = useSelector((state) => state.counter.value)
   // const dispatch = useDispatch()
   const [show, setShow] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  // console.log(isScrolled
+  const [showNav, setShowNav] = useState(true);
+  const prevScrollPosition = useRef(0);
+  console.log(showNav, prevScrollPosition.current);
+  const handleScr = () => {
+    const currentScroll = window.scrollY;
+    console.log(currentScroll);
+    if (currentScroll > 300 && currentScroll > prevScrollPosition.current) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+    prevScrollPosition.current = currentScroll;
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScr);
+    return () => {
+      window.removeEventListener("scroll", handleScr);
+    };
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+
       if (scrollPosition > 100) {
         // Adjust the threshold as needed
         setIsScrolled(true);
@@ -24,10 +44,15 @@ export default function Nav() {
       }
     };
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
   }, [isScrolled]);
   return (
     <nav
-      className={`flex z-10 fixed w-full justify-between items-center transition-all duration-500 bg-slate-800 ${
+      className={`flex ${
+        showNav ? "" : "opacity-0"
+      } z-30 fixed w-full justify-between items-center transition-all duration-500 bg-slate-800 ${
         isScrolled
           ? "bg-opacity-60 backdrop-blur-md"
           : "bg-opacity-15 drop-shadow-2xl "
@@ -68,7 +93,9 @@ export default function Nav() {
       </div>
 
       <div className="hidden md:block">
-        <NavBtn title="Start Contact" delay={6} />
+        <Link to={"/contact"}>
+          <NavBtn title="Start Contact" delay={6} />
+        </Link>
       </div>
 
       <BsList

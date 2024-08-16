@@ -17,7 +17,7 @@ function Blog() {
       subtitle="Latest Articles & News from the Blogs"
       bg="black"
     >
-      <div className="flex flex-col  mt-7">
+      <div className="flex flex-col  mt-20">
         <BlogsCard
           icon="black"
           text="We are thrilled to announce the launch of our latest innovative software at Abyssinia Software..."

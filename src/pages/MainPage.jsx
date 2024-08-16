@@ -66,6 +66,7 @@ function MainPage() {
       <Projects />
       <Blog />
       <Questions />
+
       <Footer />
     </>
   );

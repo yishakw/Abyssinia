@@ -12,9 +12,9 @@ function Card({ icon, title, text, button, indix }) {
       control.start("visible");
     }
   }, [isInView]);
-  const indixSign = indix % 2 === 0 ? -20 : 20;
+  const indixSign = indix % 2 === 0 ? -200 : 200;
   const delay = (0 + indix) / 10;
-  console.log(delay);
+  // console.log(delay);
   return (
     <div
       ref={ref}
@@ -24,19 +24,21 @@ function Card({ icon, title, text, button, indix }) {
       <motion.div
         variants={{
           hidden: {
-            y: 600,
-            x: indixSign,
             opacity: 0,
+            // y: 60,
+            x: indixSign,
+            scale: 0,
           },
           visible: {
-            y: 0,
-            x: 0,
             opacity: 1,
+            // y: 0,
+            x: 0,
+            scale: 1,
           },
         }}
         initial="hidden"
         animate={control}
-        transition={{ duration: 0.3, delay: delay }}
+        transition={{ ease: "easeInOut", duration: 0.1, delay: delay }}
         className="flex flex-col justify-center max-w-96 min-w-56 lg:min-w-80  items-center text-blue-950 bg-slate-100 transition-all duration-500 hover:bg-white hover:bg-opacity-85 bg-opacity-70 p-5 m-2 rounded-xl hover:-rotate-1 hover:scale-[105%] hover:shadow-md hover:shadow-amber-700"
       >
         <>

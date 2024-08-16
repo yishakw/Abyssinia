@@ -10,6 +10,7 @@ const IMAGES = {
   car: new URL("./colorful.webp", import.meta.url).href,
   sqr: new URL("./squares.jpg", import.meta.url).href,
   questionMark: new URL("./question.svg", import.meta.url).href,
+  web: new URL("./web.svg", import.meta.url).href,
 };
 
 export default IMAGES;

@@ -31,7 +31,7 @@ function Questions() {
   }
 
   return (
-    <>
+    <div className="relative">
       <PageContainer
         title="FAQs"
         subtitle="Get the Answers to Common Questions"
@@ -41,6 +41,13 @@ function Questions() {
         smFlex ? "" : "sm:grid  sm:grid-cols-2 sm:justify-center"
         } md:grid md:justify-between md:gap-14 md:grid-cols-${numGrid} my-11`} */}
 
+        <div className="w-full opacity-40 p- hidden lg:[display:initial] lg:absolute bottom-10 -top-10 right-[130px] z- sm:full md:w-[300px] lg:w-full ">
+          <img
+            src={IMAGES.questionMark}
+            alt="img"
+            className="w-[60vw] -rotate-12"
+          />
+        </div>
         <div className="flex flex-col items-center z-10 lg:relative lg:left-36 justify-center my-24 w-[310px] ">
           <Question />
           <Question />
@@ -48,14 +55,7 @@ function Questions() {
           <Question />
         </div>
       </PageContainer>
-      <div className="w-full opacity-40 p-7 hidden lg:[display:initial] lg:relative lg:top-[4700px bottom-[800px] right-[150px] z- sm:full md:w-[300px] lg:w-full md:ml-8 lg:ml-24 bg-slate-5">
-        <img
-          src={IMAGES.questionMark}
-          alt="img"
-          className="w-[60vw] -rotate-12"
-        />
-      </div>
-    </>
+    </div>
   );
 }
 
