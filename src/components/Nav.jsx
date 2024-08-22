@@ -51,7 +51,7 @@ export default function Nav() {
   return (
     <nav
       className={`flex ${
-        showNav ? "" : "opacity-0"
+        showNav ? "" : "opacity-0 z-0 invisible"
       } z-30 fixed w-full justify-between items-center transition-all duration-500 bg-slate-800 ${
         isScrolled
           ? "bg-opacity-60 backdrop-blur-md"
@@ -73,7 +73,10 @@ export default function Nav() {
           !show && "hidden"
         } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
       >
-        <ul className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row gap-3 sm:gap-0 ">
+        <ul
+          className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row gap-3 sm:gap-0 "
+          onClick={() => show && setShow(false)}
+        >
           <Link to={"/"}>
             <NavBtn title="Home" delay={1} />
           </Link>
@@ -88,6 +91,9 @@ export default function Nav() {
           </Link>
           <Link to={"/blog"}>
             <NavBtn title="Blog" delay={5} />
+          </Link>
+          <Link to={"/contact"}>
+            <NavBtn clas="sm:hidden" title="Start Contact" delay={6} />
           </Link>
         </ul>
       </div>

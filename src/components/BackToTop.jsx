@@ -27,7 +27,7 @@ function BackToTop() {
       <span
         className={`${
           scr ? "fixed" : "hidden"
-        } top-[85vh] left-[90vw] opacity-70`}
+        } top-[85vh] left-[75vw] sm:left-[80vw] lg:left-[90vw] opacity-70`}
       >
         <FaArrowAltCircleUp size={50} color="#af7F0" fill="#fF7500" />
       </span>

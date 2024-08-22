@@ -1,10 +1,10 @@
 import { motion, warning } from "framer-motion";
 
-function NavBtn({ title, delay }) {
+function NavBtn({ title, delay, clas }) {
   const waitFor = `1.${delay + 1}`;
   return (
     <motion.li
-      className="list-none mx-3 flex justify-center w-[95%] lg:w-fit lg:my-0 cursor-pointer border-b border-transparent hover:border-b hover:border-slate-500 hover:border-opacity-70 md:hover:border-transparent "
+      className={`${clas} list-none mx-3 flex justify-center w-[95%] lg:w-fit lg:my-0 cursor-pointer border-b border-transparent hover:border-b hover:border-slate-500 hover:border-opacity-70 md:hover:border-transparent `}
       initial={{ opacity: 0, y: -50, scale: 0.8 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: waitFor }}
