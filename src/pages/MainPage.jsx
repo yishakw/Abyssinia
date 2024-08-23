@@ -55,7 +55,8 @@ function MainPage() {
       },
     },
   };
-  const array_images = ["erp", "webb", "saas_app", "mobile_dev"];
+  const array_images = ["erp", "webb", "mobile_dev"];
+  // , "saas_app"
   const len = array_images.length;
   const [imgIndx, setImgIndx] = useState(0);
   useEffect(() => {
