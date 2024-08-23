@@ -68,7 +68,7 @@ function MainPage() {
 
   return (
     <>
-      <div className="w-full h-[100vh] place-content-center flex justify-center items-center pt-52 min-h-[500px] pb-11 bg-slate-40  ">
+      <div className="w-full h-[100vh] place-content-center flex justify-center items-center pt-20 sm:pt-52 min-h-[500px] pb-11 bg-slate-40  ">
         <div className="flex sm:flex-row flex-col-reverse">
           <div className="sm:mt-0 mt-[5vw] z-10 mb-7 ">
             <motion.h1
