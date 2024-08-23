@@ -15,10 +15,9 @@ export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const prevScrollPosition = useRef(0);
-  console.log(showNav, prevScrollPosition.current);
+  // console.log(showNav, prevScrollPosition.current);
   const handleScr = () => {
     const currentScroll = window.scrollY;
-    console.log(currentScroll);
     if (currentScroll > 300 && currentScroll > prevScrollPosition.current) {
       setShowNav(false);
     } else {

@@ -22,7 +22,8 @@ function Footer() {
             {...register("email", { required: true })}
             type="email"
             placeholder="Enter your email adress"
-            className="border-none bg-transparent focus:border-none border-0 focus:outline-none  pl-2  "
+            className="border-none bg-transparent focus:border-none border-0 focus:outline-none  pl-2"
+            autoComplete="email"
           />
           <button className="text-amber-600 bg-sky-950 py-2 px-3 flex items-center rounded-full hover:scale-105 ">
             signup

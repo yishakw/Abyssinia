@@ -2,7 +2,7 @@ import Button from "./Button";
 import IMAGES from "../assets/Images";
 import { useState, useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-function Card({ icon, title, text, button, indix }) {
+function Card({ icon, title, text, button, indix, link_to }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -54,7 +54,7 @@ function Card({ icon, title, text, button, indix }) {
           <h1 className="font-semibold lg:text-[120%]">{title}</h1>
         </>
         <p>{text}</p>
-        <Button name={button} bg="none" />
+        <Button name={button} bg="bg-amber-200" link_to={link_to} />
       </motion.div>
     </div>
   );

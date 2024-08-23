@@ -25,15 +25,15 @@ function ProjectCard({ icon, title, text, button, width, height, k }) {
           className={`${hovered ? "scale-[1.8] transition-all " : ""}`}
         />
       </div>
-      <div className="top-0 left-0 right-0 bottom-0 absolute flex flex-col items-center justify-center bg-emerald-800 opacity-0 transition-opacity duration-500 hover:opacity-90 ">
+      <div className="top-0 left-0 right-0 bottom-0 absolute flex flex-col items-center justify-center bg-emerald-800 opacity-0 transition-opacity duration-500 hover:opacity-90">
         <a href="#">
-          <h1 className="font-semibold mb-6  text-amber-100 opacity-100 hover:text-amber-600 hover: text-5xl ">
+          <h1 className="font-semibold mb-6  text-amber-100 opacity-100 hover:text-amber-600 hover: text-4xl ">
             {title}
           </h1>
         </a>
 
         <p className="p-2 text-amber-200 text-lg ">{text}</p>
-        <Button name="View More" bg="amber-600 " />
+        <Button name="View More" bg="amber-600 " link_to={"/projects"}/>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ function Service({ smFlex }) {
       <div
         className={`flex flex-col items-center justify-center gap-5  ${
           smFlex ? "" : "sm:grid  sm:grid-cols-2 sm:justify-center"
-        } md:grid md:justify-between md:gap-8 md:grid-cols-2 my-11`}
+        } md:grid md:justify-between md:gap-8 md:grid-cols-2 lg:grid-cols-3 my-11`}
       >
         {services.map((service, i) => (
           <Card
@@ -47,6 +47,7 @@ function Service({ smFlex }) {
             button="Read More"
             icon={service.icon}
             indix={i}
+            link_to={"/service"}
           />
         ))}
       </div>

@@ -27,7 +27,7 @@ function BlogsCard({ icon, title, text, button }) {
           <p className=" mb-2">July 04, 2024</p>
           {/* <p className="text-start hidden lg:inline pb-6">{text}</p> */}
           <div className=" relative top-2 sm:top-11 md:top-4 lg:top-14">
-            <Button name={button} bg="" u={true} />
+            <Button name={button} bg="" u={true} link_to={"/blog"} />
           </div>
         </div>
       </div>
