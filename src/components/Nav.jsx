@@ -67,40 +67,42 @@ export default function Nav() {
         </Link>
         <div className="absolute  top-11 rounded-3xl bottom-0 right-0 left-8 flex items-center justify-center w-20 -z-10 tw-11 h-11 opacity-35 -rotate-12 bg-black "></div>
       </div>
-      <div
-        className={`${
-          !show && "hidden"
-        } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
-      >
-        <ul
-          className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row gap-3 sm:gap-0 "
-          onClick={() => show && setShow(false)}
+      <div className="flex justify-between gap-11">
+        <div
+          className={`${
+            !show && "hidden"
+          } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
         >
-          <Link to={"/"}>
-            <NavBtn title="Home" delay={1} />
-          </Link>
-          <Link to={"/service"}>
-            <NavBtn title="Service" delay={2} />
-          </Link>
-          <Link to={"/projects"}>
-            <NavBtn title="Projects" delay={3} />
-          </Link>
-          <Link to={"/questions"}>
-            <NavBtn title="FAQs" delay={4} />
-          </Link>
-          <Link to={"/blog"}>
-            <NavBtn title="Blog" delay={5} />
-          </Link>
-          <Link to={"/contact"}>
-            <NavBtn clas="sm:hidden" title="Start Contact" delay={6} />
-          </Link>
-        </ul>
-      </div>
+          <ul
+            className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row  gap-3 sm:gap-0 "
+            onClick={() => show && setShow(false)}
+          >
+            <Link to={"/"}>
+              <NavBtn title="Home" delay={1} />
+            </Link>
+            <Link to={"/service"}>
+              <NavBtn title="Service" delay={2} />
+            </Link>
+            <Link to={"/projects"}>
+              <NavBtn title="Projects" delay={3} />
+            </Link>
+            <Link to={"/questions"}>
+              <NavBtn title="FAQs" delay={4} />
+            </Link>
+            <Link to={"/blog"}>
+              <NavBtn title="Blog" delay={5} />
+            </Link>
+            <Link to={"/contact"}>
+              <NavBtn clas="sm:hidden" title="Start Contact" delay={6} />
+            </Link>
+          </ul>
+        </div>
 
-      <div className="hidden md:block">
-        <Link to={"/contact"}>
-          <NavBtn title="Start Contact" delay={6} />
-        </Link>
+        <div className="hidden md:block">
+          <Link to={"/contact"}>
+            <NavBtn title="Start Contact" delay={6} />
+          </Link>
+        </div>
       </div>
 
       <BsList

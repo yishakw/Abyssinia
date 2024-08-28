@@ -1,27 +1,44 @@
-import Card from "../components/Card"
-import PageContainer from "../components/PageContainer"
+import Card from "../components/Card";
+import PageContainer from "../components/PageContainer";
 function Service({ smFlex }) {
   const services = [
     {
       title: "Website Development",
       text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
       icon: "web",
+      st: "scale-150",
     },
     {
       title: "Mobile App development",
       text: "We develop IOS and Android mobile apps. with free and unlimited technical support. with responsive design and attractive UI/UX design",
       button: "Read More",
       icon: "mobile",
+      st: "scale-150",
     },
     {
-      title: "Website Development",
-      text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
+      title: "Software As a service",
+      text: "We Have completed Software Used as Software AS service. ERP system , School System, Mall/building Information management system",
+      icon: "saas",
+      st: "",
+    },
+
+    {
+      title: "General Technology Consulting",
+      text: "We provide Technology consulting For Companies and Individuals, on Software development, hardware, Cyber technology and Networking",
+      icon: "consult",
+      st: "scale-125",
+    },
+    {
+      title: "Software Development Training",
+      text: "We provide Courses and Training in Software Technology, Digital Marketing, Graphics design and Networking. with FutureX educational consultancy",
       icon: "training",
+      st: "scale-150",
     },
     {
-      title: "Website Development",
-      text: "we develop Web apps, and websites for companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
+      title: "Software Security Testing",
+      text: "We have service of testing Software security and filling gaps, and we consult Secure Software development",
       icon: "security",
+      st: "scale-110",
     },
   ];
   return (
@@ -48,6 +65,7 @@ function Service({ smFlex }) {
             icon={service.icon}
             indix={i}
             link_to={"/service"}
+            img_style={service.st}
           />
         ))}
       </div>
@@ -55,4 +73,4 @@ function Service({ smFlex }) {
   );
 }
 
-export default Service
+export default Service;
