@@ -11,7 +11,7 @@ function Footer() {
     );
   }
   return (
-    <footer className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 py-11 bg-slate-950 bg-opacity-90 text-amber-900 px-11">
+    <footer className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 py-11 bg-slate-950 bg-opacity-90 text-amber-900 px-6">
       <FooterComponent header={"Newsletter"} classes={"col-span-2"}>
         <p className="mb-2 ml-1">Subscribe to our news letter</p>
         <form

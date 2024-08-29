@@ -20,6 +20,7 @@ export default function Nav() {
     const currentScroll = window.scrollY;
     if (currentScroll > 300 && currentScroll > prevScrollPosition.current) {
       setShowNav(false);
+      setShow(false);
     } else {
       setShowNav(true);
     }
@@ -67,14 +68,14 @@ export default function Nav() {
         </Link>
         <div className="absolute  top-11 rounded-3xl bottom-0 right-0 left-8 flex items-center justify-center w-20 -z-10 tw-11 h-11 opacity-35 -rotate-12 bg-black "></div>
       </div>
-      <div className="flex justify-between gap-11">
+      <div className="lg:flex lg:justify-between lg:gap-11">
         <div
           className={`${
             !show && "hidden"
-          } etfili absolute  items-center justify-cetner top-28 lg:static  lg:flex`}
+          }  absolute  items-center justify-cetner top-28 left-0 right-0 lg:static  lg:flex`}
         >
           <ul
-            className="flex flex-col w-[90vw] lg:w-fit bg-black lg:bg-transparent bg-opacity-75 lg:flex-row  gap-3 sm:gap-0 "
+            className="flex flex-col items-center w-[90vw] lg:w-fit  bg-black lg:bg-transparent bg-opacity-75 lg:flex-row mx-auto lg:mx-0 gap-3 sm:gap-0 "
             onClick={() => show && setShow(false)}
           >
             <Link to={"/"}>
