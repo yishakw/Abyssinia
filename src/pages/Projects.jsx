@@ -9,25 +9,20 @@ function Projects({ smFlex, numGrid = 2 }) {
   const count = useSelector((state) => state.counter.value);
   const projectsArray = [
     {
-      title: "Website Development",
-      text: "we develop Web apps, and websites for ",
-      icon: "web",
+      title: "ERP System",
+      text: "Complete ERP system for factories and Trading Campanies ",
+      icon: "dash",
     },
     {
-      title: "Mobile App development",
-      text: "companies and for individuals with SEO optimization, with Attractive UI/UX design, Responsive design",
-      icon: "mobile",
+      title: "School Information System",
+      text: "We provide a complete School Information System to manage All School Activities. It has Web app, Mobile App and desktop App from School Manager , for students and For parents",
+      icon: "school",
     },
     {
-      title: "Website Development",
-      text: " for companies and for individuals with SEO optimization, with Attractive UI/UX desig",
-      icon: "training",
+      title: "Mall Informaton Management System",
+      text: "we provide a complete Mall Information Management system with web application and Mobile application",
+      icon: "mall",
       height: "200",
-    },
-    {
-      title: "Website Development",
-      text: "we develop Web appsptimization, with Attractive UI/UX design, Responsive design",
-      icon: "training",
     },
   ];
 
@@ -42,7 +37,7 @@ function Projects({ smFlex, numGrid = 2 }) {
       subtitle="Explore Our Latest Projects"
       numGrid={3}
     >
-      <div className="flex flex-col items-center justify-center gap-9 sm:grid sm:grid-cols-2 sm:gap-10 sm:items-center sm:justify-center md:grid-cols-3 p-4 ">
+      <div className="flex flex-col items-center justify-center mt-20 gap-9 sm:grid sm:grid-cols-2 sm:gap-10 sm:items-center sm:justify-center md:grid-cols-3 p-4 ">
         {projectsArray.map((project, i) => (
           <ProjectCard
             key={i}

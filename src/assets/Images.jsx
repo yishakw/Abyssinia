@@ -17,6 +17,9 @@ const IMAGES = {
   questionMark: new URL("./question.svg", import.meta.url).href,
   question: new URL("./dev_question.png", import.meta.url).href,
   web: new URL("./dev_web.png", import.meta.url).href,
+  dash: new URL("./erp_dash.png", import.meta.url).href,
+  school: new URL("./erp_school.png", import.meta.url).href,
+  mall: new URL("./erp_mall.png", import.meta.url).href,
 };
 
 export default IMAGES;

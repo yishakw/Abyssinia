@@ -17,7 +17,7 @@ function ProjectCard({ icon, title, text, button, width, height, k }) {
       onMouseLeave={() => dispatch(projectH(k))}
     >
       <div
-        className={` flex items-center justify-center sm:w-72 lg:w-[280px] lg:h-[400px] h-80`}
+        className={` flex items-center justify-center overflow-hidden sm:w-72 lg:w-[280px] lg:h-[400px] h-80`}
       >
         <img
           src={IMAGES[icon]}
@@ -33,7 +33,7 @@ function ProjectCard({ icon, title, text, button, width, height, k }) {
         </a>
 
         <p className="p-2 text-amber-200 text-lg ">{text}</p>
-        <Button name="View More" bg="amber-600 " link_to={"/projects"}/>
+        <Button name="View More" bg="amber-600 " link_to={"/projects"} />
       </div>
     </div>
   );
