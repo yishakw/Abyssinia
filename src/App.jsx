@@ -32,7 +32,7 @@ function App() {
   // }, []);
 
   return (
-    <div className="bg-main-bg bg-no-repeat">
+    <div className="bg-main-bg bg-no-repeat w-full">
       <Nav />
       <Routes>
         <Route path="/" element={<MainPage />} />
